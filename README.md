@@ -6,6 +6,14 @@ It was created with the help of the amazing
 Motion Canvas library ❤️  As well as lessons that I learned thanks to
 Venkat Subramaniam 🥳
 
+## TODO
+
+* [ ] create a `palettes` file that will hold constants for your colors in
+hex values, so that other classes can easily import them
+* [ ] rename the `example.tsx` file
+* [ ] insert a picture of Barbara Liskov
+* [ ] code in the animations of how a stack and vector works
+
 ## Credits
 
 * [Core Design Principles for Software Developers by Venkat Subramaniam](https://www.youtube.com/watch?v=llGgO74uXMI&t=6214s)
