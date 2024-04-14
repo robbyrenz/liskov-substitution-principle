@@ -6,7 +6,7 @@ class Animal {
 
 class Lion extends Animal {
   @Override
-  public String roar() {
+  public String roar() throws RuntimeException {
     return "Roar!";
   }
 }
