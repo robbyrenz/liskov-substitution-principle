@@ -1,5 +1,6 @@
-import { Code, makeScene2D } from '@motion-canvas/2d';
-import { createRef, beginSlide, slideTransition, Direction, DEFAULT } from '@motion-canvas/core';
+import { Code, Img, makeScene2D } from '@motion-canvas/2d';
+import { createRef, beginSlide, slideTransition, Direction, DEFAULT, spring, PlopSpring } from '@motion-canvas/core';
+import green_checkmark from '../../images/green_checkmark.png'
 
 export default makeScene2D(function*(view) {
   // set the default color of the background
@@ -41,6 +42,30 @@ class Lion extends Animal {
   // have the Lion subclass throw an unchecked exception
   yield* beginSlide('Throw the unchecked exception')
   yield* code().code.insert([8, 23], 'throws RuntimeException ', 1)
+  // then ask the audience if the code would compile or not
+
+  // instiantiates a green checkmark out of the viewport
+  // yield* beginSlide('Show the green checkmark!')
+  const greenCheckmark = createRef<Img>();
+  view.add(
+    <Img
+      ref={greenCheckmark}
+      src={green_checkmark}
+      scale={0.75}
+      x={-1500}
+      y={100}
+    />
+  )
+
+  // once they answer, spring the checkmark into view!
+  yield* beginSlide('Spring the green checkmark into view!')
+  yield* spring(PlopSpring, -1500, 350, 1, value => {
+    greenCheckmark().position.x(value)
+  })
+
+  // move the checkmark out of view!
+  yield* beginSlide('Remove the green checkmark')
+  yield* greenCheckmark().position.x(3000, 1);
 
   // show the third code snippet
   yield* beginSlide('Show the Cat subclass')
