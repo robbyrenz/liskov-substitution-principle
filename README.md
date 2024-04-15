@@ -11,8 +11,12 @@ Venkat Subramaniam 🥳
 * [x] create a `palettes` file that will hold constants for your colors in
 hex values, so that other classes can easily import them
 * [x] rename the `example.tsx` file
-* [ ] insert a picture of Barbara Liskov
+* [x] insert a picture of Barbara Liskov
 * [ ] code in the animations of how a stack and vector works
+  * [ ] don't forget to mention the practical uses of the stack and vector data structures
+* [ ] show the consequences of using the `instanceOf` operator in order to get
+around violating the LSP
+* [ ] show how we can use composition/delegation
 
 ## Credits
 
