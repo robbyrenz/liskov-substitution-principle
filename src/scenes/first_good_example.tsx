@@ -1,10 +1,11 @@
 import { Code, Img, makeScene2D } from '@motion-canvas/2d';
 import { createRef, beginSlide, slideTransition, Direction, DEFAULT, all } from '@motion-canvas/core';
+import { BACKGROUND_COLOR } from '../palettes';
 import fry from '../../images/fry.png'
 
 export default makeScene2D(function*(view) {
   // set the default color of the background
-  view.fill('#1d3557');
+  view.fill(BACKGROUND_COLOR);
 
   // set the transtion to swipe from the right into this new slide
   yield* slideTransition(Direction.Right, 2)

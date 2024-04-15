@@ -8,7 +8,7 @@ Venkat Subramaniam 🥳
 
 ## TODO
 
-* [ ] create a `palettes` file that will hold constants for your colors in
+* [x] create a `palettes` file that will hold constants for your colors in
 hex values, so that other classes can easily import them
 * [x] rename the `example.tsx` file
 * [ ] insert a picture of Barbara Liskov
