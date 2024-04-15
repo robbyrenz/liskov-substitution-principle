@@ -1,5 +1,5 @@
-import { Code, Img, lines, makeScene2D } from '@motion-canvas/2d';
-import { createRef, beginSlide, slideTransition, Direction, DEFAULT, all, waitFor } from '@motion-canvas/core';
+import { Code, Img, makeScene2D } from '@motion-canvas/2d';
+import { createRef, beginSlide, slideTransition, Direction, DEFAULT, all } from '@motion-canvas/core';
 import fry from '../../images/fry.png'
 
 export default makeScene2D(function*(view) {
