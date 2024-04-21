@@ -35,7 +35,7 @@ export default makeScene2D(function*(view) {
   // bring the picture into view
   yield* beginSlide('Show a picture of Babara Liskov');
   yield* babaraLiskov().position.y(0, 1)
-  yield* title().remove()
+  yield* title().position.y(2000, 0.5) // yield* title().remove() was giving a compiler error (even though it compiles?), so I had to do this hacky way of removing the text from the screen
   yield* all(
     babaraLiskov().position.y(0, 1),
     babaraLiskov().scale(0.35, 1.5)
@@ -77,7 +77,7 @@ export default makeScene2D(function*(view) {
   yield* beginSlide('Show the definition of LSP')
   yield* definition().position.x(300, 0.6) // zips into view from the right of the screen
 
-  // add another text that emphasizes that we should only subclass for pure substitutability?
+  // TODO: add another text that emphasizes that we should only subclass for pure substitutability?
 
   // wait until I press the space bar in order to head to the next slide and transition
   yield* beginSlide('Head to the next slide and transition')
