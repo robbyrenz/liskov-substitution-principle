@@ -12,14 +12,16 @@ Venkat Subramaniam 🥳
 hex values, so that other classes can easily import them
 * [x] rename the `example.tsx` file
 * [x] insert a picture of Barbara Liskov
-* [ ] code in the animations of how a stack and vector works
-  * [ ] don't forget to mention the practical uses of the stack and vector data structures
-* [ ] show the consequences of using the `instanceOf` operator in order to get
+* [x] code in the animations of how a stack ~~and vector~~ works
+  * [ ] ~~don't forget to mention the practical uses of the stack and vector
+  data structures~~
+* [x] show the consequences of using the `instanceOf` operator in order to get
 around violating the LSP
-* [ ] show how we can use composition/delegation
+* [x] show how we can use composition/delegation
 
 ## Credits
 
 * [Core Design Principles for Software Developers by Venkat Subramaniam](https://www.youtube.com/watch?v=llGgO74uXMI&t=6214s)
 * [Motion Canvas](https://motioncanvas.io/)
 * [Liskov Substitution Principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle)
+* Clean Architecture by Robert C. Martin
