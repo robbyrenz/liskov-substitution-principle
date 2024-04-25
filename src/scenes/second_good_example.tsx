@@ -2,6 +2,7 @@ import { Code, Img, makeScene2D } from '@motion-canvas/2d';
 import { createRef, beginSlide, slideTransition, Direction, DEFAULT, spring, PlopSpring } from '@motion-canvas/core';
 import { BACKGROUND_COLOR } from '../palettes';
 import green_checkmark from '../../images/green_checkmark.png'
+import always_has_been from '../../images/always_has_been.jpg'
 
 export default makeScene2D(function*(view) {
   // set the default color of the background
@@ -88,5 +89,21 @@ class Cat extends Animal {
 
   yield* beginSlide('add in the compiler error as a comment!')
   yield* code().code.insert([15, 42], '// compiler error!\n', 0.6)
+
+  // insert the "Always Has Been" meme out of view
+  yield* beginSlide('Insert the "Always Has Been" meme')
+  const alwaysHasBeen = createRef<Img>();
+  view.add(
+    <Img
+      ref={alwaysHasBeen}
+      src={always_has_been}
+      scale={2.3}
+      x={3000}
+    />
+  );
+  yield* alwaysHasBeen().position.x(0, 2) // and then move 'Always Has Been' meme to cover the entire screen
+
+  // wait until I press the space bar in order to head to the next slide and transition
+  yield* beginSlide('Head to the next slide and transition')
 })
 
