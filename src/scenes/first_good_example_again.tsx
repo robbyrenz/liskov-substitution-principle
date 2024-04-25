@@ -80,36 +80,6 @@ class PricingService {
   yield* beginSlide('Clear the highlights for Engine arugment in the second code snippet')
   yield* secondCodeSnippet().selection(DEFAULT, 0.6)
 
-  // TODO: remove the below, redundant code!
-
-
-
-  // insert the "suspicious Fry" meme out of view :)
-  yield* beginSlide('Insert the Fry meme')
-  const suspiciousFryMeme = createRef<Img>();
-  view.add(
-    <Img
-      ref={suspiciousFryMeme}
-      src={fry}
-      scale={2}
-      x={-2000}
-    />
-  );
-  yield* suspiciousFryMeme().position.x(0, 1) // and then move Fry to the center of the screen
-
-  // move Fry to the side so that we won't block the code snippets
-  yield* beginSlide('Move Fry to the side')
-  yield* suspiciousFryMeme().scale(2.5, 1.5) // fancy scaling work just to be dramatic
-  yield* all(
-    suspiciousFryMeme().scale(1, 2),
-    suspiciousFryMeme().position.x(500, 1.5),
-    suspiciousFryMeme().position.y(-200, 1.5)
-  )
-
-  // appending the compiler error as a comment to the code
-  yield* beginSlide('add in the compiler error as a comment!')
-  yield* firstCodeSnippet().code.insert([15, 24], '// a compiler error is thrown due to a violation of the LSP!\n', 0.6)
-
   // wait until I press the space bar in order to head to the next slide and transition
   yield* beginSlide('Head to the next slide and transition')
 })
