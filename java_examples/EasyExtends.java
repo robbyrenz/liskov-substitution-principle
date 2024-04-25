@@ -15,4 +15,16 @@ public class EasyExtends {
   public class Bar extends Foo {
 
   }
+
+  public class Bar {
+    private final Foo foo = new Foo();
+
+    public int getAge() {
+      return foo.getAge();
+    }
+
+    public String getCountry() {
+      return foo.getCountry();
+    }
+  }
 }

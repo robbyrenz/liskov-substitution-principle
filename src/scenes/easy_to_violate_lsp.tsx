@@ -1,4 +1,4 @@
-import { Code, Img, makeScene2D } from '@motion-canvas/2d';
+import { Code, Img, makeScene2D, word } from '@motion-canvas/2d';
 import { createRef, beginSlide, slideTransition, Direction, all } from '@motion-canvas/core';
 import { BACKGROUND_COLOR } from '../palettes';
 import haroldMeme from '../../images/harold_two.png'
@@ -59,6 +59,13 @@ public class Foo {
     harold().size([100, 100], 1.2),
     harold().position.x(-200, 1),
     harold().position.y(2000, 1.5),
+  )
+
+  // remove the 'extends' keyword and user composition instead of inheritance
+  yield* beginSlide('Remove the "extends" keyword and use composition instead of inheritance')
+  yield* all(
+    code().code.replace(word(10, 17, 12), '', 0.6),
+    code().code.insert([11, 0], "  private final Foo foo = new Foo();\n\n  public int getAge() {\n    return foo.getAge();\n  }\n\n  public String getCountry() {\n    return foo.getCountry();\n  }\n", 0.6),
   )
 
   // wait until I press the space bar in order to head to the next slide and transition
